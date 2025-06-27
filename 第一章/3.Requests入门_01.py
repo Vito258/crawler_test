@@ -4,6 +4,7 @@
 # 国内源
 # pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple requests
 
+# 爬取必应接口 -- 不带参get请求
 import requests
 query = input("输入一个你喜欢的明星：")
 
@@ -31,3 +32,6 @@ if(resp.status_code == 200):
     print("over")
 else:
     print("请求失败")
+
+# 关闭响应
+resp.close()
